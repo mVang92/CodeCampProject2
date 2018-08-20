@@ -97,3 +97,36 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// Weather API function
+function weather() {
+  var location = $("#cityLocation")
+    .val()
+    .trim();
+  var weatherURL =
+    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    location +
+    ",usa&appid=92628e6bc090b38dd780bd35c44f08d0";
+  console.log(weatherURL);
+  $.ajax({
+    url: weatherURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+    var tempMinK = response.main.temp_min;
+    var tempMaxK = response.main.temp_max;
+    var tempCurrentK = response.main.temp;
+
+    var tempMinF = (9 / 5) * (tempMinK - 273) + 32;
+    var tempMaxF = (9 / 5) * (tempMaxK - 273) + 32;
+    var tempCurrentF = (9 / 5) * (tempCurrentK - 273) + 32;
+
+    $("#tripOne").append("High: " + tempMaxF);
+    $("#tripOne").append("Low: " + tempMinF);
+    $("#tripOne").append("Current: " + tempCurrentF);
+  });
+}
+
+$("#citySubmit").click(function() {
+  weather();
+});

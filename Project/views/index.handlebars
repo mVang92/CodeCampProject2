@@ -4,6 +4,17 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>This is our Home Page!</h2>
+        <div class="tripDetails">
+          <label for="example-text">Enter your city</label>
+          <input type="text" id="cityLocation" class="form-control" aria-describedby="cityLocation" placeholder="e.g. Duluth">
+          <button id="citySubmit" class="btn btn-primary">Submit</button>
+          <div class="row">
+            <div id="tripOne" class="col-md-3"></div>
+            <div id="tripTwo" class="col-md-3">Box 2</div>
+            <div id="tripThree" class="col-md-3">Box 3</div>
+            <div id="tripFour" class="col-md-3">Box 4</div>
+          </div>
+        </div>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
