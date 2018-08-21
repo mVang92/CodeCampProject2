@@ -100,9 +100,7 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 // Weather API function
 function weather() {
-  var location = $("#cityLocation")
-    .val()
-    .trim();
+  var location = "Duluth";
   var weatherURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     location +
@@ -116,17 +114,28 @@ function weather() {
     var tempMinK = response.main.temp_min;
     var tempMaxK = response.main.temp_max;
     var tempCurrentK = response.main.temp;
+    var weatherDesc = response.weather[0].description;
+    var humidity = response.main.humidity;
 
     var tempMinF = (9 / 5) * (tempMinK - 273) + 32;
     var tempMaxF = (9 / 5) * (tempMaxK - 273) + 32;
     var tempCurrentF = (9 / 5) * (tempCurrentK - 273) + 32;
 
-    $("#tripOne").append("High: " + tempMaxF);
-    $("#tripOne").append("Low: " + tempMinF);
-    $("#tripOne").append("Current: " + tempCurrentF);
+    $("#tempMax").append("High: " + parseFloat(tempMaxF).toFixed(2) + "F");
+    $("#tempMin").append("Low: " + parseFloat(tempMinF).toFixed(2) + "F");
+    $("#tempCurrent").append(
+      "Current: " + parseFloat(tempCurrentF).toFixed(2) + "F"
+    );
+    $("#weatherDesc").append("Condition: " + toTitleCase(weatherDesc));
+    $("#humidity").append("Humidity: " + humidity + "%");
+
+    function toTitleCase(str) {
+      return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+    }
   });
 }
 
-$("#citySubmit").click(function() {
-  weather();
-});
+// Call weather function upon start of application
+weather();

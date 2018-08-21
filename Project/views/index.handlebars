@@ -1,16 +1,34 @@
 {{!-- Jumbotron --}}
 <div class="jumbotron text-center">
   <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+    content or information.</p>
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+  <div id="forecast">Weather Forecast
+    <div id="weather">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="tempCurrent"></div>
+          <div id="tempMin"></div>
+          <div id="tempMax"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="weatherDesc"></div>
+          <div id="humidity"></div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {{!-- Trip discription cards --}}
 <div class="container">
   <h2 class="tripheader text-center">Our Trips</h2>
-{{!-- Card one --}}
+  {{!-- Card one --}}
   <div class="card-group">
     <div class="card">
       <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
@@ -22,7 +40,7 @@
         <a href="#" class="card-link">Book Trip</a>
         <a href="#" class="card-link">Write Review</a>
       </div>
-{{!-- Card two --}}
+      {{!-- Card two --}}
     </div>
     <div class="card">
       <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
@@ -31,11 +49,11 @@
         <p class="card-text">Guided Camping discription here</p>
       </div>
       <div class="card-footer">
-       <a href="#" class="card-link">Book Trip</a>
-       <a href="#" class="card-link">Write Review</a>
+        <a href="#" class="card-link">Book Trip</a>
+        <a href="#" class="card-link">Write Review</a>
       </div>
     </div>
-{{!-- Card three --}}
+    {{!-- Card three --}}
     <div class="card">
       <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
       <div class="card-body">
@@ -51,38 +69,39 @@
 
   <h2 class="reviews text-center">Reviews</h2>
   <div class="row">
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-3-sm">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-3-sm">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-3-sm">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-3-sm">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-       <ul id="example-list" class="list-group">
-          {{#each review}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            {{!-- <button class="btn btn-danger float-right delete">ｘ</button> --}}
-          </li>
-          {{/each}}
-        </ul>
+    <ul id="example-list" class="list-group">
+      {{#each review}}
+      <li data-id="{{this.id}}" class="list-group-item">
+        <a href="example/{{this.id}}">{{this.text}}</a>
+        {{!--
+        <button class="btn btn-danger float-right delete">ｘ</button> --}}
+      </li>
+      {{/each}}
+    </ul>
   </div>
   {{!-- container --}}
 </div>
@@ -92,8 +111,9 @@
 
 
 
-{{!-- ================================================================================================================== --}}
-{{!-- <div id="home">
+{{!-- ==================================================================================================================
+--}} {{!--
+<div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
