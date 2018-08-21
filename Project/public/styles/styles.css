@@ -26,3 +26,12 @@
   font-size: 20px;
   font-weight: initial;
 }
+
+#reviewbutton {
+  text-align: center;
+}
+
+#hc-reviews {
+  margin-left: 20px;
+  padding: 5px;
+}
