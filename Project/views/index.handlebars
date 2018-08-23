@@ -1,104 +1,240 @@
 {{!-- Jumbotron --}}
-<div class="jumbotron text-center">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+<div class="jumbotron jumbotron-fluid">
+   <img src="../images/bannerlogo.png" id="logo">
 </div>
 
 {{!-- Trip discription cards --}}
 <div class="container">
-  <h2 class="tripheader text-center">Our Trips</h2>
-{{!-- Card one --}}
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Hiking Tours</h5>
-        <p class="card-text">Hiking Trip discription here</p>
+    
+      <h2 class="tripheader text-center">Our Trips</h2>
+      {{!-- Card one --}}
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Hiking Tours</h5>
+            <p class="card-text">Hiking Trip discription here</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Book Trip</a>
+          </div>
+          {{!-- Card two --}}
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Guided Camping Tours</h5>
+            <p class="card-text">Guided Camping discription here</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link">Book Trip</a>
+        </div>
       </div>
-      <div class="card-footer">
-        <a href="#" class="card-link">Book Trip</a>
-        <a href="#" class="card-link">Write Review</a>
+      {{!-- Card three --}}
+      <div class="card">
+        <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Boat Tours</h5>
+          <p class="card-text">Boat tour discription here</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link">Book Trip</a>
+        </div>
       </div>
-{{!-- Card two --}}
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Guided Camping Tours</h5>
-        <p class="card-text">Guided Camping discription here</p>
-      </div>
-      <div class="card-footer">
-       <a href="#" class="card-link">Book Trip</a>
-       <a href="#" class="card-link">Write Review</a>
-      </div>
-    </div>
-{{!-- Card three --}}
-    <div class="card">
-      <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Boat Tours</h5>
-        <p class="card-text">Boat tour discription here</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="card-link">Book Trip</a>
-        <a href="#" class="card-link">Write Review</a>
-      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+    <button type="button" class="btn btn-success btn-lg" id="reviewbutton">Write Trip Review</button>
     </div>
   </div>
 
-  <h2 class="reviews text-center">Reviews</h2>
-  <div class="row">
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+  <div class="row" id="hc-reviews">
+    <div class="col-md-3">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      {{!-- <a href="#" class="card-link">D3 rating graph here</a> --}}
+       <div id="viz"></div> 
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-md-3">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-md-3">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-      <div class="col-3-sm">
-        <h3>Review Title</h3>
-        <p>Review discription Paragraph here.</p>
-        <a href="#" class="card-link">D3 rating graph here</a>
-      </div>
+    <div class="col-md-3">
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <a href="#" class="card-link">D3 rating graph here</a>
+    </div>
 
-       <ul id="example-list" class="list-group">
-          {{#each review}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            {{!-- <button class="btn btn-danger float-right delete">ｘ</button> --}}
-          </li>
-          {{/each}}
-        </ul>
+    <ul id="review" class="list-group">
+      {{#each review}}
+       {{#unless this.deleted}}
+        <li>
+          {{this.id}}
+          {{this.review_name}}
+          {{this.review_text}}
+          {{this.review_ratingTotal}}
+        {{!-- <button class="btn btn-danger float-right delete">ｘ</button> --}}
+        </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
   </div>
   {{!-- container --}}
 </div>
 
+<div id="forecast">Weather Forecast
+    <div id="weather">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="day0Date"></div>
+          <div id="day0Day"></div>
+          <div id="day0Max"></div>
+          <div id="day0Min"></div>
+          <div id="day0Cond"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="day1Date"></div>
+          <div id="day1Day"></div>
+          <div id="day1Max"></div>
+          <div id="day1Min"></div>
+          <div id="day1Cond"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="day2Date"></div>
+          <div id="day2Day"></div>
+          <div id="day2Max"></div>
+          <div id="day2Min"></div>
+          <div id="day2Cond"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <div id="day3Date"></div>
+          <div id="day3Day"></div>
+          <div id="day3Max"></div>
+          <div id="day3Min"></div>
+          <div id="day3Cond"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="day4Date"></div>
+          <div id="day4Day"></div>
+          <div id="day4Max"></div>
+          <div id="day4Min"></div>
+          <div id="day4Cond"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="day5Date"></div>
+          <div id="day5Day"></div>
+          <div id="day5Max"></div>
+          <div id="day5Min"></div>
+          <div id="day5Cond"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <h2 class="tripheader text-center">Our Trips</h2>
+<form>
+    <div class="form-row">
+      <div class="col-md-5 mb-3" id="review-form-fn">
+        <label for="validationServer01">First name</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" required>
+      </div>
+
+      <div class="col-md-5 mb-3" id="review-form-ln">
+        <label for="validationServer02">Last name</label>
+        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
+      </div>
+    </div>
+
+      <select class="custom-select col-md-10 mb-3" id="Q1">
+        <option selected>Trip review question one</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q2">
+        <option selected>Trip review question two</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q3">
+        <option selected>Trip review question three</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q4">
+        <option selected>Trip review question four</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q5">
+        <option selected>Trip review question five</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <div class="form-group col-md-10 mb-3" id="review-text">
+        <label for="exampleFormControlTextarea1">Review Comments</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+      </div>
+
+    <div class="col-md-10 mb-3">
+      <button type="submit" class="btn btn-primary" id="review-submit">Submit Review</button>
+    </div>
+  </form>
+</div>
 
 
-
-
-
-{{!-- ================================================================================================================== --}}
-{{!-- <div id="home">
+{{!-- ==================================================================================================================
+--}} {{!--
+<div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>This is our Home Page!</h2>
+        <div class="tripDetails">
+          <label for="example-text">Enter your city</label>
+          <input type="text" id="cityLocation" class="form-control" aria-describedby="cityLocation" placeholder="e.g. Duluth">
+          <button id="citySubmit" class="btn btn-primary">Submit</button>
+          <div class="row">
+            <div id="tripOne" class="col-md-3"></div>
+            <div id="tripTwo" class="col-md-3">Box 2</div>
+            <div id="tripThree" class="col-md-3">Box 3</div>
+            <div id="tripFour" class="col-md-3">Box 4</div>
+          </div>
+        </div>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
@@ -125,4 +261,7 @@
 </div> --}}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> 
+<script src="/js/script.js" type="text/JavaScript"></script>
 <script src="/js/index.js"></script>
+<script src="/js/weather.js"></script>
