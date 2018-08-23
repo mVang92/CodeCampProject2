@@ -3,16 +3,24 @@
    <img src="../images/bannerlogo.png" id="logo">
 </div>
 
+<div class="container text-center" id="weather">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="list-inline-item"><i class="fas fa-sun"></i> Today's Weather in the BWCA:</p>
+        <div class="list-inline-item" id="day0Date"></div>
+        <div class="list-inline-item" id="day0Day"></div>
+        <div class="list-inline-item" id="day0Max"></div>
+        <div class="list-inline-item" id="day0Min"></div>
+        <div class="list-inline-item" id="day0Cond"></div>
+      </div>
+    </div>
+</div>
+
 {{!-- Trip discription cards --}}
 <div class="container">
-<<<<<<< HEAD
-       <h2 class="tripheader text-center">Our Trips</h2>
-=======
-    
-      <h2 class="tripheader text-center">Our Trips</h2>
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
+       <h2 class="tripheader">Our Trips</h2>
       {{!-- Card one --}}
-      <div class="card-group">
+      <div class="card-group tripcards">
         <div class="card">
           <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
           <div class="card-body">
@@ -38,153 +46,130 @@
       <div class="card">
         <img class="card-img-top" src="../images/trip-placeholder.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Boat Tours</h5>
+          <h5 class="card-title">Mountain Biking Paths</h5>
           <p class="card-text">Boat tour discription here</p>
         </div>
         <div class="card-footer">
           <a href="#" class="card-link">Book Trip</a>
         </div>
       </div>
-<<<<<<< HEAD
   </div>
 
   <div class="row">
-    <div class="col-md-12 text-center">
-    <button type="button" class="btn btn-success btn-lg" id="reviewbutton" href="/form.handlebars">Write Trip Review</button>
+    <div class="col-md-12 text-center" id="reviewbtn">
+    <button type="button" class="btn btn-success btn-lg" id="reviewbutton" href="/">Write Trip Review</button>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row reviewsHC">
     <div class="col-sm-3">
-=======
-  </div>
-
-  <div class="row">
-    <div class="col-md-12 text-center">
-    <button type="button" class="btn btn-success btn-lg" id="reviewbutton">Write Trip Review</button>
+      <h3>Review Title</h3>
+      <p>Review discription Paragraph here.</p>
+      <button class="btn btn-danger delete">ｘ</button>
+    
     </div>
-  </div>
 
-  <div class="row" id="hc-reviews">
     <div class="col-md-3">
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-<<<<<<< HEAD
-    <div class="col-sm-3">
-=======
     <div class="col-md-3">
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-<<<<<<< HEAD
-    <div class="col-sm-3">
-=======
     <div class="col-md-3">
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-<<<<<<< HEAD
-    <div class="col-sm-3">
-=======
-    <div class="col-md-3">
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
-      <h3>Review Title</h3>
-      <p>Review discription Paragraph here.</p>
-      <a href="#" class="card-link">D3 rating graph here</a>
-    </div>
-
-<<<<<<< HEAD
    <ul id="review" class="list-group">
       {{#each review}}
-=======
-    <ul id="review" class="list-group">
-      {{#each review}}
-       {{#unless this.deleted}}
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
         <li>
           {{this.id}}
           {{this.review_name}}
           {{this.review_text}}
           {{this.review_ratingTotal}}
-<<<<<<< HEAD
           {{this.review_author}}
           <button class="btn btn-danger float-right delete">ｘ</button>
         </li>
-=======
-        {{!-- <button class="btn btn-danger float-right delete">ｘ</button> --}}
-        </li>
-        {{/unless}}
->>>>>>> 251b117a8d834200e50916b8b97b8562a2ab5535
       {{/each}}
     </ul>
   </div>
   {{!-- container --}}
 </div>
 
-<div id="forecast">Weather Forecast
-    <div id="weather">
-      <div class="row">
-        <div class="col-md-4">
+<div class="container weather" id="forecast">Six Day Weather Forcast
+    <div class="row">
+        <div class="col-md-12">
           <div id="day0Date"></div>
           <div id="day0Day"></div>
           <div id="day0Max"></div>
           <div id="day0Min"></div>
           <div id="day0Cond"></div>
         </div>
-        <div class="col-md-4">
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+          <div id="day0Date"></div>
+          <div id="day0Day"></div>
+          <div id="day0Max"></div>
+          <div id="day0Min"></div>
+          <div id="day0Cond"></div>
+        </div>
+    </div>
+
+        <div class="col-md-12">
           <div id="day1Date"></div>
           <div id="day1Day"></div>
           <div id="day1Max"></div>
           <div id="day1Min"></div>
           <div id="day1Cond"></div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-12">
           <div id="day2Date"></div>
           <div id="day2Day"></div>
           <div id="day2Max"></div>
           <div id="day2Min"></div>
           <div id="day2Cond"></div>
         </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-4">
+    
+        <div class="col-md-12">
           <div id="day3Date"></div>
           <div id="day3Day"></div>
           <div id="day3Max"></div>
           <div id="day3Min"></div>
           <div id="day3Cond"></div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-12">
           <div id="day4Date"></div>
           <div id="day4Day"></div>
           <div id="day4Max"></div>
           <div id="day4Min"></div>
           <div id="day4Cond"></div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-12">
           <div id="day5Date"></div>
           <div id="day5Day"></div>
           <div id="day5Max"></div>
           <div id="day5Min"></div>
           <div id="day5Cond"></div>
         </div>
-      </div>
+
     </div>
   </div>
 
+
 <div class="container">
-  <h2 class="tripheader text-center">Our Trips</h2>
+  <h2 class="tripheader">Trip Review Form</h2>
 <form>
     <div class="form-row">
       <div class="col-md-5 mb-3" id="review-form-fn">
@@ -197,6 +182,13 @@
         <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
       </div>
     </div>
+
+     <select class="custom-select col-md-10 mb-3" id="type">
+        <option selected>Trip Experienced</option>
+        <option value="T1">Camping</option>
+        <option value="T2">Hiking</option>
+        <option value="T3">Mountain Biking</option>
+      </select>
 
       <select class="custom-select col-md-10 mb-3" id="Q1">
         <option selected>Trip review question one</option>
