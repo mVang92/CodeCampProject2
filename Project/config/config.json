@@ -14,7 +14,6 @@
 
     "password": "Summer2015",
     "database": "testdb",
-
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

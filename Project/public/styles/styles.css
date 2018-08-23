@@ -12,12 +12,12 @@
 }
 
 #forecast {
-  border: 1px solid lightgrey;
+  /* border: 1px solid lightgrey; */
   border-radius: 10px;
   width: 100%;
   margin: auto;
-  font-weight: bold;
-  font-size: 26px;
+  /* font-weight: bold;
+  font-size: 26px; */
 }
 
 #weather {
@@ -27,10 +27,12 @@
   font-weight: initial;
 }
 
+
 /* #review-section {
   margin-right: 0;
   margin-left: 0;
 } */
+
 
 .jumbotron {
   background-image: url('../images/bannerbg.jpg');
@@ -45,5 +47,21 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: -40px;
+}
+
+.tripcards {
+  margin-bottom: 30px;
+}
+
+#reviewbtn {
+  margin-bottom: 30px;
+}
+
+.reviewsHC {
+  margin-bottom: 50px;
+}
+
+#weather {
+  margin-top: -30px;
 }
 
