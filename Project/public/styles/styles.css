@@ -14,10 +14,12 @@
 #forecast {
   border: 1px solid lightgrey;
   border-radius: 10px;
-  width: 100%;
+  width: 80%;
   margin: auto;
   font-weight: bold;
   font-size: 26px;
+  padding: 0.75em;
+  text-align: center;
 }
 
 #weather {
@@ -26,11 +28,6 @@
   font-size: 20px;
   font-weight: initial;
 }
-
-/* #review-section {
-  margin-right: 0;
-  margin-left: 0;
-} */
 
 .jumbotron {
   background-image: url('../images/bannerbg.jpg');
@@ -47,3 +44,10 @@
   margin-top: -40px;
 }
 
+#reviewbutton {
+margin: 1em 0 0.5em 0;
+}
+
+hr {
+  margin-top: 0;
+}
