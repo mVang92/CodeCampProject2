@@ -101,11 +101,12 @@
   </div>
 
   <h2 class="reviews text-center">Reviews</h2>
-  <div class="row">
+  <div class="row" id="review-section">
     <div class="col-3-sm">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
+      {{!-- <div id="viz"></div> --}}
     </div>
 
     <div class="col-3-sm">
@@ -189,5 +190,9 @@
 </div> --}}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> {{!--
+<script src="https://d3js.org/d3.v5.min.js"
+  type="text/JavaScript"></script> --}}
+<script src="/js/script.js" type="text/JavaScript"></script>
 <script src="/js/index.js"></script>
 <script src="/js/weather.js"></script>
