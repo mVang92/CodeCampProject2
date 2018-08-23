@@ -18,7 +18,10 @@
 
 {{!-- Trip discription cards --}}
 <div class="container">
-       <h2 class="tripheader">Our Trips</h2>
+
+    
+      <h2 class="tripheader text-center">Our Trips</h2>
+
       {{!-- Card one --}}
       <div class="card-group tripcards">
         <div class="card">
@@ -56,17 +59,19 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12 text-center" id="reviewbtn">
-    <button type="button" class="btn btn-success btn-lg" id="reviewbutton" href="/">Write Trip Review</button>
+
+    <div class="col-md-12 text-center">
+    <button type="button" class="btn btn-success btn-lg" id="reviewbutton">Write Trip Review</button>
     </div>
   </div>
 
-  <div class="row reviewsHC">
-    <div class="col-sm-3">
+  <div class="row" id="hc-reviews">
+    <div class="col-md-3">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
-      <button class="btn btn-danger delete">ｘ</button>
-    
+      {{!-- <a href="#" class="card-link">D3 rating graph here</a> --}}
+       <div id="viz"></div> 
+
     </div>
 
     <div class="col-md-3">
@@ -94,6 +99,7 @@
           {{this.review_name}}
           {{this.review_text}}
           {{this.review_ratingTotal}}
+
           {{this.review_author}}
           <button class="btn btn-danger float-right delete">ｘ</button>
         </li>
@@ -292,5 +298,9 @@
 </div> --}}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> {{!--
+<script src="https://d3js.org/d3.v5.min.js"
+  type="text/JavaScript"></script> --}}
+<script src="/js/script.js" type="text/JavaScript"></script>
 <script src="/js/index.js"></script>
 <script src="/js/weather.js"></script>

@@ -27,6 +27,13 @@
   font-weight: initial;
 }
 
+
+/* #review-section {
+  margin-right: 0;
+  margin-left: 0;
+} */
+
+
 .jumbotron {
   background-image: url('../images/bannerbg.jpg');
   background-size: cover;
@@ -57,3 +64,4 @@
 #weather {
   margin-top: -30px;
 }
+
