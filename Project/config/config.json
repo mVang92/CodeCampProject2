@@ -10,7 +10,6 @@
     "username": "root",
     "password": "P@$$w0rd",
     "database": "bwatersdb",
-
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
