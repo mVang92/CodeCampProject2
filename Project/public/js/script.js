@@ -3,7 +3,7 @@ var height = 320,
     // width = 600,
     width = 320,
     // barWidth = 50,
-    barWidth = 50,
+    barWidth = 60,
     barOffset = 5;
 
 var yScale = d3.scaleLinear()
