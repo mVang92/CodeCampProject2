@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Get all examples
   app.get("/api/examples", function(req, res) {
     db.bwaters.findAll({}).then(function(dbBwaters) {
-      res.json(dbBwaterss);
+      res.json(dbBwaters);
     });
   });
 
@@ -17,8 +17,10 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
-    db.bwaters.destroy({ where: { id: req.params.id } }).then(function(dbBwaters) {
-      res.json(dbBwaters);
-    });
+    db.bwaters
+      .destroy({ where: { id: req.params.id } })
+      .then(function(dbBwaters) {
+        res.json(dbBwaters);
+      });
   });
 };

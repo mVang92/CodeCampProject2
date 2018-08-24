@@ -147,17 +147,17 @@
     <div class="form-row">
       <div class="col-md-5 mb-3" id="review-form-fn">
         <label for="validationServer01">First name</label>
-        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" required>
+        <input type="text" class="form-control is-valid" id="firstName" placeholder="First name" required>
       </div>
 
       <div class="col-md-5 mb-3" id="review-form-ln">
         <label for="validationServer02">Last name</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
+        <input type="text" class="form-control is-valid" id="lastName" placeholder="Last name" required>
       </div>
     </div>
 
     <select class="custom-select col-md-10 mb-3" id="Q1">
-      <option selected>Trip review question one</option>
+      <option selected disabled>Trip review question one</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -166,7 +166,7 @@
     </select>
 
     <select class="custom-select col-md-10 mb-3" id="Q2">
-      <option selected>Trip review question two</option>
+      <option selected disabled>Trip review question two</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -175,7 +175,7 @@
     </select>
 
     <select class="custom-select col-md-10 mb-3" id="Q3">
-      <option selected>Trip review question three</option>
+      <option selected disabled>Trip review question three</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -184,7 +184,7 @@
     </select>
 
     <select class="custom-select col-md-10 mb-3" id="Q4">
-      <option selected>Trip review question four</option>
+      <option selected disabled>Trip review question four</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -193,7 +193,7 @@
     </select>
 
     <select class="custom-select col-md-10 mb-3" id="Q5">
-      <option selected>Trip review question five</option>
+      <option selected disabled>Trip review question five</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
@@ -203,11 +203,11 @@
 
     <div class="form-group col-md-10 mb-3" id="review-text">
       <label for="exampleFormControlTextarea1">Review Comments</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+      <textarea class="form-control" id="reviewTextArea" rows="5"></textarea>
     </div>
 
     <div class="col-md-10 mb-3">
-      <button type="submit" class="btn btn-primary" id="review-submit">Submit Review</button>
+      <button type="submit" class="btn btn-primary" id="submitReview">Submit Review</button>
     </div>
   </form>
 </div>
@@ -259,6 +259,12 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> 
-<script src="/js/script.js" type="text/JavaScript"></script>
+<!-- D3 Library script -->
+<script src="/js/script.js"></script>
 <script src="/js/index.js"></script>
+<!-- Weather API -->
 <script src="/js/weather.js"></script>
+<!-- Firebase Authentication -->
+{{!-- <script src="/js/fireBaseAuth.js"></script> --}}
+<!-- Submit user info script -->
+<script src="/js/submitInfo.js"></script>
