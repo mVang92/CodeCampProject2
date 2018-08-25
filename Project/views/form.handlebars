@@ -94,29 +94,43 @@
   </form>
 </div>
 
+    <select class="custom-select col-md-10 mb-3" id="Q3">
+      <option selected disabled>Trip review question three</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+    </select>
+
+    <select class="custom-select col-md-10 mb-3" id="Q4">
+      <option selected disabled>Trip review question four</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+    </select>
+
+    <select class="custom-select col-md-10 mb-3" id="Q5">
+      <option selected disabled>Trip review question five</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+      <option value="5">Five</option>
+    </select>
+
+    <div class="form-group col-md-10 mb-3" id="review-text">
+      <label for="exampleFormControlTextarea1">Review Comments</label>
+      <textarea class="form-control" id="reviewTextArea" rows="5"></textarea>
     </div>
-  </div>
 
-
-
-
-
-{{!-- <div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Example</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
-        </div>
-      </div>
+    <div class="col-md-10 mb-3">
+      <button type="submit" class="btn btn-primary" id="submitReview">Submit Review</button>
     </div>
-  </div>
-</div> --}}
+  </form>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<!-- Submit user info script -->
+<script src="/js/submitInfo.js"></script>

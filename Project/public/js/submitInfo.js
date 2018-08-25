@@ -13,30 +13,29 @@ $(document).ready(function() {
         .val()
         .trim(),
       // Capture the user comments
-      reviewComments: $("#reviewTextArea")
+      comments: $("#reviewTextArea")
         .val()
         .trim(),
       // Capture the five question ratings
-      ratings: [
-        $("#Q1")
-          .val()
-          .trim(),
-        $("#Q2")
-          .val()
-          .trim(),
-        $("#Q3")
-          .val()
-          .trim(),
-        $("#Q4")
-          .val()
-          .trim(),
-        $("#Q5")
-          .val()
-          .trim()
-      ]
+      Q1: +$("#Q1")
+        .val()
+        .trim(),
+      Q2: +$("#Q2")
+        .val()
+        .trim(),
+      Q3: +$("#Q3")
+        .val()
+        .trim(),
+      Q4: +$("#Q4")
+        .val()
+        .trim(),
+      Q5: +$("#Q5")
+        .val()
+        .trim()
     };
     console.log(userInput);
+    $.post("/api/bwaters", userInput).done(function() {
+      console.log("Posted new data to database.");
+    });
   });
 });
-
-// module.exports = userInput;
