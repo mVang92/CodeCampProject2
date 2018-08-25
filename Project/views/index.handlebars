@@ -25,26 +25,37 @@
 </div>
 
 {{!-- Trip discription cards --}}
-<div class="container-fluid">
-      <h2 class="tripheader text-center" style="color:#c49e6b;">Our Trips</h2>
 
-      {{!-- Card one --}}
-      <div class="card-group tripcards">
-        <div class="card">
-          <img class="card-img-top" src="../images/hiking.jpg" alt="Card image cap">
-          <div class="card-body scroll">
-            <h5 class="card-title" id="hiking">Hiking</h5>
-            <p class="card-text"></p>
+<h2 class="tripheader text-center" style="color:#c49e6b;">Our Trips</h2>
+  <div class="container-fluid">
+        {{!-- Card one --}}
+        <div class="card-group tripcards">
+          <div class="card">
+            <img class="card-img-top" src="../images/hiking.jpg" alt="Card image cap">
+            <div class="card-body scroll">
+              <h5 class="card-title" id="hiking">Hiking Tours</h5>
+              <p class="card-text"></p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+            </div>
+            {{!-- Card two --}}
           </div>
-          <div class="card-footer">
-            <a href="#" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
+          <div class="card">
+            <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
+            <div class="card-body scroll">
+              <h5 class="card-title" id="mountainBiking">Mountain Biking</h5>
+              <p class="card-text"></p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
           </div>
-          {{!-- Card two --}}
         </div>
+        {{!-- Card three --}}
         <div class="card">
           <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
           <div class="card-body scroll">
-            <h5 class="card-title" id="mountainBiking">Mountain Biking</h5>
+            <h5 class="card-title" id="camping">Camping</h5>
             <p class="card-text"></p>
           </div>
           <div class="card-footer">
@@ -62,14 +73,14 @@
           <a href="#" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
         </div>
 
+      </div>
     </div>
-  </div>
 
 {{!-- Write Review Button --}}
   <div class="row">
     <div class="col-md-12 text-center">
 
-    <button type="button" class="btn btn-lg" id="reviewbutton">Write Trip Review</button>
+    <button type="button" class="btn btn-lg" id="reviewbutton"><a href="/form">Write Trip Review</a></button>
 
     </div>
   </div><hr>
@@ -95,20 +106,18 @@
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-    {{!--
-    <div class="col-md-3">
-      <h3>Review Title</h3>
-      <p>Review discription Paragraph here.</p>
-      <a href="#" class="card-link">D3 rating graph here</a>
-    </div> --}}
 
     <ul id="review" class="list-group">
-      {{#each review}} {{#unless this.deleted}}
+      {{#each review}}
       <li>
-        {{this.id}} {{this.review_name}} {{this.review_text}} {{this.review_ratingTotal}} {{!-- <button class="btn btn-danger float-right delete">ｘ</button>
-        --}}
+        {{this.id}} 
+        {{this.comments}} 
+        {{this.review_ratingTotal}} 
+        {{this.firstName}}
+        {{createdAt}}
+        <button class="btn btn-danger float-right delete">ｘ</button>
       </li>
-      {{/unless}} {{/each}}
+      {{/each}}
     </ul>
   </div>
   {{!-- container --}}

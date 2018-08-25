@@ -1,7 +1,8 @@
 $(document).ready(function() {
   // Submit click function
-  $("#submitReview").click(function(event) {
+  $("#myForm").submit(function(event) {
     event.preventDefault();
+
     //Gather user input
     var userInput = {
       // Capture the user first name
@@ -36,6 +37,11 @@ $(document).ready(function() {
     console.log(userInput);
     $.post("/api/bwaters", userInput).done(function() {
       console.log("Posted new data to database.");
+
+      $("#myModal").modal("toggle");
+      $("#myModal").on("shown.bs.modal", function() {
+        $("#myForm").trigger("focus");
+      });
     });
   });
 });
