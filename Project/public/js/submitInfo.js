@@ -13,7 +13,7 @@ $(document).ready(function() {
         .val()
         .trim(),
       // Capture the user comments
-      comments: $("#reviewTextArea")
+      comments: $("#comments")
         .val()
         .trim(),
       // Capture the five question ratings
