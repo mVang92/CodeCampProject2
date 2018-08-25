@@ -31,7 +31,7 @@ h2 {
   padding-bottom: 15px;
   background-color: #1f2c38;
   margin: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   color: #f4f2e4;
   line-height: 5px;
   font-size: 15px;
@@ -95,5 +95,34 @@ hr {
 #hc-reviews {
   background:rgba(160,138,98,0.25);
   padding: 25px 0 25px 0;
+}
+
+#tripreview-header {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+#myForm {
+  margin: 25px 15px 25px 15px;
+}
+
+.nameinput {
+  margin: 0px 0px 15px 0px;
+}
+
+.forminput {
+  margin: 5px 0px 5px 0px;
+}
+
+.tripheader {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+.modal-header {
+  background:rgba(160,138,98,0.25);
+  color: #1f2c38;
 }
 

@@ -25,51 +25,50 @@
 </div>
 
 {{!-- Trip discription cards --}}
-<div class="container-fluid">
-      <h2 class="tripheader text-center" style="color:#c49e6b;">Our Trips</h2>
+<h2 class="tripheader text-center" style="color:#c49e6b;">Our Trips</h2>
+  <div class="container-fluid">
+        {{!-- Card one --}}
+        <div class="card-group tripcards">
+          <div class="card">
+            <img class="card-img-top" src="../images/hiking.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Hiking Tours</h5>
+              <p class="card-text">Hiking Trip discription here</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+            </div>
+            {{!-- Card two --}}
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Guided Camping Tours</h5>
+              <p class="card-text">Guided Camping discription here</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+          </div>
+        </div>
+        {{!-- Card three --}}
+        <div class="card">
+          <img class="card-img-top" src="../images/biking.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Mountain Biking Paths</h5>
+            <p class="card-text">Mountain Biking tour discription here</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+          </div>
 
-      {{!-- Card one --}}
-      <div class="card-group tripcards">
-        <div class="card">
-          <img class="card-img-top" src="../images/hiking.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Hiking Tours</h5>
-            <p class="card-text">Hiking Trip discription here</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
-          </div>
-          {{!-- Card two --}}
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Guided Camping Tours</h5>
-            <p class="card-text">Guided Camping discription here</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
-        </div>
       </div>
-      {{!-- Card three --}}
-      <div class="card">
-        <img class="card-img-top" src="../images/biking.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Mountain Biking Paths</h5>
-          <p class="card-text">Mountain Biking tour discription here</p>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
-        </div>
-
     </div>
-  </div>
 
 {{!-- Write Review Button --}}
   <div class="row">
     <div class="col-md-12 text-center">
 
-    <button type="button" class="btn btn-lg" id="reviewbutton">Write Trip Review</button>
+    <button type="button" class="btn btn-lg" id="reviewbutton"><a href="/form">Write Trip Review</a></button>
 
     </div>
   </div><hr>
@@ -95,20 +94,18 @@
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-    {{!--
-    <div class="col-md-3">
-      <h3>Review Title</h3>
-      <p>Review discription Paragraph here.</p>
-      <a href="#" class="card-link">D3 rating graph here</a>
-    </div> --}}
 
     <ul id="review" class="list-group">
-      {{#each review}} {{#unless this.deleted}}
+      {{#each review}}
       <li>
-        {{this.id}} {{this.review_name}} {{this.review_text}} {{this.review_ratingTotal}} {{!-- <button class="btn btn-danger float-right delete">ｘ</button>
-        --}}
+        {{this.id}} 
+        {{this.comments}} 
+        {{this.review_ratingTotal}} 
+        {{this.firstName}}
+        {{createdAt}}
+        <button class="btn btn-danger float-right delete">ｘ</button>
       </li>
-      {{/unless}} {{/each}}
+      {{/each}}
     </ul>
   </div>
   {{!-- container --}}
