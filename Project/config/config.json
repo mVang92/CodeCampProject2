@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "123456789",
+    "password": "root",
     "database": "bwatersdb",
 
     "host": "localhost",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "Summer2015",
+    "password": "root",
     "database": "bwatersdb",
     
     "host": "localhost",
