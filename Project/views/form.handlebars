@@ -1,31 +1,98 @@
 {{!-- Jumbotron --}}
-<div class="jumbotron text-center">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+<div class="jumbotron jumbotron-fluid">
+   <img src="../images/bannerlogo.png" id="logo">
 </div>
 
-{{!-- form with authentication --}}
+<div class="container-fluid text-center" id="weathertop">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="list-inline-item"><i class="fas fa-sun"></i> Today's Weather in the BWCA:</p>
+        <div class="list-inline-item" id="day0Date"></div>
+        <div class="list-inline-item" id="day0Day"></div>
+        <div class="list-inline-item" id="day0Max"></div>
+        <div class="list-inline-item" id="day0Min"></div>
+        <div class="list-inline-item" id="day0Cond"></div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+  <h2 class="tripheader">Trip Review Form</h2>
 <form>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationServer01">First name</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
-      <div class="valid-feedback">
-        Looks good!
+    <div class="form-row">
+      <div class="col-md-5 mb-3" id="review-form-fn">
+        <label for="validationServer01">First name</label>
+        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" required>
       </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationServer02">Last name</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
-      <div class="valid-feedback">
-        Looks good!
+
+      <div class="col-md-5 mb-3" id="review-form-ln">
+        <label for="validationServer02">Last name</label>
+        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
       </div>
     </div>
 
+     <select class="custom-select col-md-10 mb-3" id="type">
+        <option selected>Trip Experienced</option>
+        <option value="T1">Camping</option>
+        <option value="T2">Hiking</option>
+        <option value="T3">Mountain Biking</option>
+      </select>
 
+      <select class="custom-select col-md-10 mb-3" id="Q1">
+        <option selected>Trip review question one</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q2">
+        <option selected>Trip review question two</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q3">
+        <option selected>Trip review question three</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q4">
+        <option selected>Trip review question four</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <select class="custom-select col-md-10 mb-3" id="Q5">
+        <option selected>Trip review question five</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+
+      <div class="form-group col-md-10 mb-3" id="review-text">
+        <label for="exampleFormControlTextarea1">Review Comments</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+      </div>
+
+    <div class="col-md-10 mb-3">
+      <button type="submit" class="btn btn-primary" id="review-submit">Submit Review</button>
+    </div>
+  </form>
+</div>
 
     </div>
   </div>

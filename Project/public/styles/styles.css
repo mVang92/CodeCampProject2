@@ -1,6 +1,10 @@
-/* div {
-  border: 1px solid red;
-} */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+}
 
 .list-group-item {
   line-height: 2.5;
@@ -11,34 +15,41 @@
   height: 500px;
 }
 
-#forecast {
-  /* border: 1px solid lightgrey; */
-  border-radius: 10px;
-  width: 100%;
-  margin: auto;
-  /* font-weight: bold;
-  font-size: 26px; */
-}
-
 #weather {
-  padding: 15px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: initial;
+  margin: 0px;
+  background-color: #1f2c38;
+  color: #f4f2e4;
+  line-height: 20px;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+#weathertop {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #1f2c38;
+  margin: 0px;
+  margin-bottom: 25px;
+  color: #f4f2e4;
+  line-height: 5px;
+  font-size: 15px;
+}
+
+.weatherdays {
+  padding: 5px;
+}
 
 /* #review-section {
-  margin-right: 0;
-  margin-left: 0;
 } */
-
 
 .jumbotron {
   background-image: url('../images/bannerbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height:450px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #logo {
@@ -46,22 +57,44 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -40px;
+  padding-top: -10px;
 }
 
 .tripcards {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
-#reviewbtn {
+#reviewbutton {
   margin-bottom: 30px;
+  background-color: #c49e6b;
+  color: #f4f2e4;
+}
+
+#reviewbutton:hover {
+  background:rgba(160,138,98,0.75);
 }
 
 .reviewsHC {
   margin-bottom: 50px;
 }
 
-#weather {
-  margin-top: -30px;
-}
+#footer {
+  bottom: 0px;
+  width: 100%;
+  position: relative;
+  background-color: #c49e6b;
+  text-align: center;
+  color: #1f2c38;
+  padding: 25px 0 5px 0;
+  margin-top: 0px;
+  }
 
+.navbar {
+  background:rgba(160,138,98,0.75);
+  }
+
+#hc-reviews {
+  background:rgba(160,138,98,0.25);
+  padding: 25px 0 25px 0;
+}
