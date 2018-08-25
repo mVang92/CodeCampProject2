@@ -1,5 +1,6 @@
 {{!-- Jumbotron --}}
 <div class="jumbotron jumbotron-fluid">
+
     <nav class="navbar navbar-dark">
     <a class="navbar-brand" href="#">
       <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -60,56 +61,54 @@
         <div class="card-footer">
           <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
         </div>
-      </div>
+
+    </div>
   </div>
 
 {{!-- Write Review Button --}}
   <div class="row">
     <div class="col-md-12 text-center">
+
     <button type="button" class="btn btn-lg" id="reviewbutton">Write Trip Review</button>
+
     </div>
-  </div>
+  </div><hr>
 
 {{!-- Review Section --}}
   <div class="row" id="hc-reviews">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       {{!-- <a href="#" class="card-link">D3 rating graph here</a> --}}
-       <div id="viz"></div> 
-
+      <div id="viz" class="col-sm-4"></div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
     </div>
 
+    {{!--
     <div class="col-md-3">
       <h3>Review Title</h3>
       <p>Review discription Paragraph here.</p>
       <a href="#" class="card-link">D3 rating graph here</a>
-    </div>
+    </div> --}}
 
-   <ul id="review" class="list-group">
-      {{#each review}}
-        <li>
-          {{this.id}}
-          {{this.review_name}}
-          {{this.review_text}}
-          {{this.review_ratingTotal}}
-
-          {{this.review_author}}
-          <button class="btn btn-danger float-right delete">ｘ</button>
-        </li>
-      {{/each}}
+    <ul id="review" class="list-group">
+      {{#each review}} {{#unless this.deleted}}
+      <li>
+        {{this.id}} {{this.review_name}} {{this.review_text}} {{this.review_ratingTotal}} {{!-- <button class="btn btn-danger float-right delete">ｘ</button>
+        --}}
+      </li>
+      {{/unless}} {{/each}}
     </ul>
   </div>
   {{!-- container --}}
@@ -165,58 +164,15 @@
 <div id="footer">
     <div class="container">
         <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay  <i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i></p>
-    </div>
-</div>
-{{!-- ==================================================================================================================
---}} {{!--
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <div class="tripDetails">
-          <label for="example-text">Enter your city</label>
-          <input type="text" id="cityLocation" class="form-control" aria-describedby="cityLocation" placeholder="e.g. Duluth">
-          <button id="citySubmit" class="btn btn-primary">Submit</button>
-          <div class="row">
-            <div id="tripOne" class="col-md-3"></div>
-            <div id="tripTwo" class="col-md-3">Box 2</div>
-            <div id="tripThree" class="col-md-3">Box 3</div>
-            <div id="tripFour" class="col-md-3">Box 4</div>
-          </div>
-        </div>
-
-
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> --}}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> {{!--
-<script src="https://d3js.org/d3.v5.min.js"
-  type="text/JavaScript"></script> --}}
-<script src="/js/script.js" type="text/JavaScript"></script>
+<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> 
+<!-- D3 Library script -->
+<script src="/js/script.js"></script>
 <script src="/js/index.js"></script>
+<!-- Weather API -->
 <script src="/js/weather.js"></script>
+<!-- Firebase Authentication -->
+{{!-- <script src="/js/fireBaseAuth.js"></script> --}}
+<!-- Submit user info script -->
+<script src="/js/submitInfo.js"></script>

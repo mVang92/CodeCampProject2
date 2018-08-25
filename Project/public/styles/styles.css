@@ -15,6 +15,7 @@ h2 {
   height: 500px;
 }
 
+
 #weather {
   margin: 0px;
   background-color: #1f2c38;
@@ -39,9 +40,6 @@ h2 {
 .weatherdays {
   padding: 5px;
 }
-
-/* #review-section {
-} */
 
 .jumbotron {
   background-image: url('../images/bannerbg.jpg');
@@ -75,8 +73,8 @@ h2 {
   background:rgba(160,138,98,0.75);
 }
 
-.reviewsHC {
-  margin-bottom: 50px;
+hr {
+  margin-top: 0;
 }
 
 #footer {
@@ -98,3 +96,4 @@ h2 {
   background:rgba(160,138,98,0.25);
   padding: 25px 0 25px 0;
 }
+
