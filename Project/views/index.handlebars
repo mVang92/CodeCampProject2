@@ -85,8 +85,8 @@
       <h3 id="name3"></h3>
       <p id="reviewDesc3"></p>
 
-      {{!--
-      <div id="viz" class="col-sm-4"></div> --}}
+      
+      <div id="viz" class="col-sm-4"></div>
     </div>
     <div class="col-md-4">
       <h3 id="name2"></h3>
@@ -99,15 +99,17 @@
       <a href="#" class="card-link">D3 rating graph here</a>
       <div>
         <ul id="review" class="list-group">hi
+
           {{#each bwaters}}
           <li>hello
-            {{this.id}} {{this.firstName}} {{this.comments}} {{createdAt}}
+            {{this.id}} {{this.firstName}} 
             <a><button class="updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
             <a><button class="deleteReview" data-bwatersid="{{this.id}}">Delete</button></a>
           </li>
           {{/each}}
         </ul>
       </div>
+     
     </div>
   </div>
 
