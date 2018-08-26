@@ -1,16 +1,14 @@
 {
   "development": {
     "username": "root",
-    
-    "password": "P@$$w0rd",
+    "password": "root",
     "database": "bwatersdb",
-
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "P@$$w0rd",
+    "password": "root",
     "database": "bwatersdb",
     
     "host": "localhost",
