@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     
-    "password": "root",
+    "password": "P@$$w0rd",
     "database": "bwatersdb",
 
     "host": "localhost",
