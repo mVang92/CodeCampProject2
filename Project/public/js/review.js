@@ -2,7 +2,7 @@ console.log("review.js loaded");
 $(document).ready(function() {
   $(".updateReview").click(function(event) {
     event.preventDefault();
-    var id = $(this).data("id");
+    var id = $(this).data("bwatersid");
     console.log(id);
     $.ajax("/api/bwaters/" + id, {
       type: "PUT"
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   $(".deleteReview").click(function(event) {
     event.preventDefault();
-    var id = $(this).data("id");
+    var id = $(this).data("bwatersid");
     $.ajax("/api/bwaters/" + id, {
       type: "DELETE"
     }).then(function() {

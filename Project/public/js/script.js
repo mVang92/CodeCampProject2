@@ -13,7 +13,7 @@ d3.json("/api/bwaters")
             top: 0,
             right: 0,
             bottom: 30,
-            left: 20
+            left: 30
         }
 
         for (var x = 0; x < d.length; x++) {
@@ -26,15 +26,19 @@ d3.json("/api/bwaters")
         var avgQ1 = qOneTotal / d.length;
         console.log(avgQ1);
         avgRating.push(avgQ1);
+
         var avgQ2 = qTwoTotal / d.length;
         console.log(avgQ2);
         avgRating.push(avgQ2);
+
         var avgQ3 = qThreeTotal / d.length;
         console.log(avgQ3);
         avgRating.push(avgQ3);
+
         var avgQ4 = qFourTotal / d.length;
         console.log(avgQ4);
         avgRating.push(avgQ4);
+
         var avgQ5 = qFiveTotal / d.length;
         console.log(avgQ5);
         avgRating.push(avgQ5);
@@ -72,7 +76,7 @@ d3.json("/api/bwaters")
             .range([height, 0]);
 
         yAxisTicks = d3.axisLeft(yAxisValues)
-            .ticks(10)
+            // .ticks(10)
 
         xScale = d3.scaleBand()
             .domain(avgRating)
@@ -90,7 +94,7 @@ d3.json("/api/bwaters")
 
         xAxisTicks = d3.axisBottom(xAxisValues)
             // .ticks(d3.timeDay.every(1))
-            .ticks(10)
+            // .ticks(10)
 
         colors = d3.scaleLinear()
             .domain([0, 2.5, d3.max(avgRating)])
@@ -142,11 +146,11 @@ d3.json("/api/bwaters")
             });
 
         yGuide = d3.select('#viz svg').append('g')
-            .attr('transform', 'translate(20,0)')
+            .attr('transform', 'translate(30,0)')
             .call(yAxisTicks)
 
         xGuide = d3.select('#viz svg').append('g')
-            .attr('transform', 'translate(20,' + height + ')')
+            .attr('transform', 'translate(30,' + height + ')')
             .call(xAxisTicks)
 
         myChart.transition()
