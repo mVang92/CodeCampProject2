@@ -3,7 +3,6 @@
     "username": "root",
     "password": "root",
     "database": "bwatersdb",
-
     "host": "localhost",
     "dialect": "mysql"
   },
