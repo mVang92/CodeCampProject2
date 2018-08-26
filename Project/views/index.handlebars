@@ -60,9 +60,9 @@
 
     {{!-- Card three --}}
     <div class="card">
-      <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
+      <img class="card-img-top" src="../images/biking.jpg" alt="Card image cap">
       <div class="card-body scroll">
-        <h5 class="card-title" id="camping">Camping</h5>
+        <h5 class="card-title" id="mountainBiking">Mountain Biking</h5>
         <p class="card-text"></p>
       </div>
       <div class="card-footer">
@@ -80,14 +80,26 @@
 </div>
 <hr> {{!-- Review Section --}}
 <div class="container">
-  <div class="row" id="hc-reviews">
-    <div class="col-md-4">
-      <h3 id="name3"></h3>
-      <p id="reviewDesc3"></p>
-
-      
-      <div id="viz" class="col-sm-4"></div>
-    </div>
+    <div class="row" id="hc-reviews">
+      <div class="col-md-8">
+          <ul id="review" class="list-group">
+            {{#each bwaters}}
+            <li>
+              {{this.firstName}}
+              <br>{{this.comments}}
+              <br><a><button class="updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
+              <br><a><button class="deleteReview" data-bwatersid="{{this.id}}">Delete</button></a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      <div class="col-md-4">
+          <h5>Total Review Ratings:</h5>
+          <div id="viz" class="col-sm-4"></div>
+      </div>
+  </div>  
+</div>
+    {{!-- </div>
     <div class="col-md-4">
       <h3 id="name2"></h3>
       <p id="reviewDesc2"></p>
@@ -96,19 +108,8 @@
     <div class="col-md-4">
       <h3 id="name1"></h3>
       <p id="reviewDesc1"></p>
-      <a href="#" class="card-link">D3 rating graph here</a>
-      <div>
-        <ul id="review" class="list-group">hi
+      <a href="#" class="card-link">D3 rating graph here</a> --}}
 
-          {{#each bwaters}}
-          <li>hello
-            {{this.id}} {{this.firstName}} 
-            <a><button class="updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
-            <a><button class="deleteReview" data-bwatersid="{{this.id}}">Delete</button></a>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
      
     </div>
   </div>
@@ -182,6 +183,6 @@
 <!-- Weather API -->
 <script src="/js/weather.js"></script>
 <!-- Views to append data to page -->
-<script src="js/view.js"></script>
+{{!-- <script src="js/view.js"></script> --}}
 <!-- CRUD -->
 <script src="js/review.js"></script>
