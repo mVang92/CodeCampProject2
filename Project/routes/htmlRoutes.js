@@ -11,17 +11,7 @@ module.exports = function(app) {
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.bwaters
-      .findOne({ where: { id: req.params.id } })
-      .then(function(dbBwaters) {
-        res.render("example", {
-          example: dbBwaters
-        });
-      });
-  });
-
+  // Render the form page
   app.get("/form", function(req, res) {
     res.render("form");
   });

@@ -1,5 +1,3 @@
-console.log("apiRoutes.js loaded.");
-
 var db = require("../models");
 
 module.exports = function(app) {
