@@ -1,13 +1,45 @@
 module.exports = function(sequelize, DataTypes) {
   var bwaters = sequelize.define("bwaters", {
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    Q1: DataTypes.INTEGER,
-    Q2: DataTypes.INTEGER,
-    Q3: DataTypes.INTEGER,
-    Q4: DataTypes.INTEGER,
-    Q5: DataTypes.INTEGER,
-    comments: DataTypes.STRING
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+    Q1: {
+      type: DataTypes.INTEGER
+    },
+
+    Q2: {
+      type: DataTypes.INTEGER
+    },
+
+    Q3: {
+      type: DataTypes.INTEGER
+    },
+
+    Q4: {
+      type: DataTypes.INTEGER
+    },
+
+    Q5: {
+      type: DataTypes.INTEGER
+    },
+
+    comments: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
   return bwaters;
 };

@@ -25,9 +25,15 @@
 </div>
 
 {{!-- Trip discription cards --}}
-
-<h2 class="tripheader text-center" style="color:#c49e6b;">Our Trips</h2>
-  <div class="container-fluid">
+<div class="row tripheader">
+  <div class="col-sm-12 col-md-12 text-center">
+    <h2 style="color:#c49e6b;">Our Trips</h2>
+    <p>The Boundary Water one stop for Adventure, BWCA Adventure Tours offers the easiest way to reserve any of BWCA abundant outdoor activities, bundle and save with any of our 
+    trips. We have most fun and best trips in the business!</p>
+  </div>
+</div> 
+  
+<div class="container-fluid">
         {{!-- Card one --}}
         <div class="card-group tripcards">
           <div class="card">
@@ -37,36 +43,27 @@
               <p class="card-text"></p>
             </div>
             <div class="card-footer">
-              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+              <a href="#" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
             </div>
             {{!-- Card two --}}
+
           </div>
           <div class="card">
             <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
             <div class="card-body scroll">
-              <h5 class="card-title" id="mountainBiking">Mountain Biking</h5>
+              <h5 class="card-title" id="camping">Camping</h5>
               <p class="card-text"></p>
             </div>
             <div class="card-footer">
-              <a href="#" class="card-link" style="color:#c49e6b;">Book Trip</a>
+              <a href="#" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
           </div>
         </div>
-        {{!-- Card three --}}
-        <div class="card">
-          <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
-          <div class="card-body scroll">
-            <h5 class="card-title" id="camping">Camping</h5>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
-        </div>
-      </div>
+    
       {{!-- Card three --}}
       <div class="card">
         <img class="card-img-top" src="../images/biking.jpg" alt="Card image cap">
         <div class="card-body scroll">
-          <h5 class="card-title"id="camping">Camping</h5>
+          <h5 class="card-title"id="mountainBiking">Mountain Biking</h5>
           <p class="card-text"></p>
         </div>
         <div class="card-footer">
@@ -79,9 +76,7 @@
 {{!-- Write Review Button --}}
   <div class="row">
     <div class="col-md-12 text-center">
-
     <button type="button" class="btn btn-lg" id="reviewbutton"><a href="/form">Write Trip Review</a></button>
-
     </div>
   </div><hr>
 
@@ -172,7 +167,7 @@
 <!--[ footer ] -->
 <div id="footer">
     <div class="container">
-        <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay  <i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i></p>
+        <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay</p>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script> 
