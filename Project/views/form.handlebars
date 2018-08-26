@@ -11,96 +11,101 @@
 
 {{!-- Header --}}
 <h2 class="tripheader text-center" id="tripreview-header" style="color:#c49e6b;">Trip Review Form</h2>
-{{!-- Form input area --}}
-<div class="container">
-  <form class="myForm center" id="myForm">
-    <div class="form-row">
-      {{!-- Reviewer first name input --}}
-      <div class="col-sm-6 col-md-6 nameinput" id="review-form-fn">
-        <label for="validationServer01">First name</label>
-        <input type="text" class="form-control is-valid" id="firstName" placeholder="First name" required>
-      </div>
-      {{!-- Reviewer last name input --}}
-      <div class="col-sm-6 col-md-6 nameinput" id="review-form-ln">
-        <label for="validationServer02">Last name</label>
-        <input type="text" class="form-control is-valid" id="lastName" placeholder="Last name" required>
-      </div>
-    </div>
-    {{!-- Question 1 --}}
-    <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q1">
-      <option selected disabled>How would you rate the quality of the trip?</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-    {{!-- Question 2 --}}
-    <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q2">
-      <option selected disabled>How would you rate the quality of information provided to you?</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-    {{!-- Question 3 --}}
-    <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q3">
-      <option selected disabled>How likely are you to recommend this trip to your friends and family?</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-    {{!-- Question 4 --}}
-    <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q4">
-      <option selected disabled>How likely are you to do this again?</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-    {{!-- Question 5 --}}
-    <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q5">
-      <option selected disabled>How would you rate the usability of our web interface?</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-    </select>
-    {{!-- Review comments text message area --}}
-    <div class="form-group col-sm-12 col-md-offset-1 forminput" id="review-text">
-      <label for="exampleFormControlTextarea1">Review Comments</label>
-      <textarea class="form-control" id="comments" rows="5"></textarea>
-    </div>
-    {{!-- Submit review to database --}}
-    <div class="col-md-10 mb-3">
-      <button type="submit" class="btn btn-primary" id="submitReview">Submit Review</button>
-      <a href="/"><button type="button" class="btn btn-danger text-light">Cancel</button></a>
-    </div>
-  </form>
+
+<div class="container-fluid">
+   <form class="myForm center" id="myForm">
+        <div class="form-row">
+          <div class="col-sm-6 col-md-6 nameinput" id="review-form-fn">
+            <label for="validationServer01">First name</label>
+            <input type="text" class="form-control is-valid" id="firstName" placeholder="First name" required>
+          </div>
+
+          <div class="col-sm-6 col-md-6 nameinput" id="review-form-ln">
+            <label for="validationServer02">Last name</label>
+            <input type="text" class="form-control is-valid" id="lastName" placeholder="Last name" required>
+          </div>
+        </div>
+
+          <p>1. How would you rate the quality of the trip?</p>
+          <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q1">
+            <option selected disabled>1 - Unsatisfactory, 5 - The BEST</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+
+          <p>2. How would you rate the quality of information provided to you?</p>
+          <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q2">
+            <option selected disabled>1 - Unsatisfactory, 5 - The BEST</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+
+          <p>3. How likely are you to recommend this trip to your friends and family?</p>
+          <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q3">
+            <option selected disabled>1 - Probably Not, 5 - Absolutely!</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+
+          <p>4. How likely are you to do this again?</p>
+          <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q4">
+            <option selected disabled>1 - Probably Not, 5 - Absolutely!</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+
+          <p>5. How would you rate the usability of our web interface?</p>
+          <select class="custom-select col-sm-12 col-md-offset-1 forminput" id="Q5">
+            <option selected disabled>1 - Hate it, 5 - Amazing!</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+          </select>
+
+          <div class="form-group col-sm-12 col-md-offset-1 forminput" id="review-text">
+            <label for="exampleFormControlTextarea1">Review Comments</label>
+            <textarea class="form-control" id="comments" rows="5"></textarea>
+          </div>
+
+        <div class="col-md-10 mb-3">
+          <button type="submit" class="btn" id="submitReview" style="background-color: #1f2c38; color: #96a515">Submit Review</button>
+        </div>
+      </form>
 </div>
 
 {{!-- Modal --}}
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLongTitle">Thank you for your review</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body text-center">
-        <h4>Thank you for your review!</h4>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">
-          <a href="/">Close</a>
-        </button>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLongTitle">Thank you for your review</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h4>Thank you for visiting<br>the Boundary Waters</h4>
+          <p>Please checkout more of our exciting trips!</p>
+        </div>
+        <div class="modal-footer" style="background-color: #c49e6b;">
+          <button type="button" class="btn" style="background-color: #1f2c38; color: #96a515">
+            <a href="/">Back</a>
+          </button>
+        </div>
       </div>
     </div>
   </div>
