@@ -83,14 +83,14 @@ h2 {
   margin-top: 25px;
 }
 
-#reviewbutton {
+#reviewButton {
   margin-bottom: 30px;
   background-color: #1f2c38;
   color: #f4f2e4;
 }
 
-#reviewbutton:hover {
-  background:  #1f2c38;
+#reviewButton:hover {
+  background:rgba(160,138,98,0.75);
 }
 
 hr {

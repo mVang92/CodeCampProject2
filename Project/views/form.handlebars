@@ -1,15 +1,15 @@
 {{!-- Jumbotron --}}
 <div class="jumbotron jumbotron-fluid">
-
-    <nav class="navbar navbar-dark">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      BWCA Adventure Tours <i class="fas fa-angle-double-right"></i>
-      </a>
-    </nav>
-   <img src="../images/bannerlogo.png" id="logo">
+  <nav class="navbar navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    BWCA Adventure Tours <i class="fas fa-angle-double-right"></i>
+    </a>
+  </nav>
+  <img src="../images/bannerlogo.png" id="logo">
 </div>
 
+{{!-- Header --}}
 <h2 class="tripheader text-center" id="tripreview-header" style="color:#c49e6b;">Trip Review Form</h2>
 
 <div class="container-fluid">
@@ -85,10 +85,9 @@
           <button type="submit" class="btn" id="submitReview" style="background-color: #1f2c38; color: #96a515">Submit Review</button>
         </div>
       </form>
-
 </div>
 
-<!-- Modal -->
+{{!-- Modal --}}
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -110,12 +109,14 @@
       </div>
     </div>
   </div>
+</div>
 
-<!--[ footer ] -->
+{{!-- Footer --}}
 <div id="footer">
-    <div class="container">
-        <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay</p>
+  <div class="container">
+    <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay  <i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i></p>
+  </div>
+</div>
 
-{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> --}}
-<!-- Submit user info script -->
+{{!-- Submit info to database --}}
 <script src="/js/submitInfo.js"></script>
