@@ -27,8 +27,8 @@
 <div class="row tripheader">
   <div class="col-sm-12 col-md-12 text-center">
     <h2 style="color:#c49e6b;">Our Trips</h2>
-    <p>The Boundary Water one stop for Adventure, BWCA Adventure Tours offers the easiest way to reserve any of BWCA abundant
-      outdoor activities, bundle and save with any of our trips. We have most fun and best trips in the business!</p>
+    <p>The Boundary Water one stop for Adventure, BWCA Adventure Tours offers the easiest way to gather information about BWCA
+      outdoor activities and plan an amazing trip. We have most fun and best trips in the business!</p>
   </div>
 </div>
 
@@ -85,8 +85,8 @@
           <ul id="review" class="list-group">
             {{#each bwaters}}
             <li>
-              {{this.firstName}}
-              <br>{{this.comments}}
+              <span>{{this.firstName}}</span>
+              <br><div class= "edit" data-bwatersid="{{this.id}}">{{this.comments}}</div>
               <br><a><button class="updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
               <br><a><button class="deleteReview" data-bwatersid="{{this.id}}">Delete</button></a>
             </li>

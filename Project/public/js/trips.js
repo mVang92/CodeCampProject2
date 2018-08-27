@@ -8,7 +8,7 @@ function decodeHtml(html) {
   txt.innerHTML = html;
   return txt.value === html ? txt.value : decodeHtml(txt.value)
 }
-
+// API call to trailsAPI
 function createSettings(activity) {
   return {
     async: true,
@@ -27,6 +27,7 @@ function createSettings(activity) {
   };
 }
 
+// lists out the hiking options on the user end. 
 function hiking() {
   console.log("hikin");
   $.ajax(createSettings(activity[0])).then(function(places) {
@@ -43,29 +44,27 @@ function hiking() {
 
 hiking();
 
+// lists out the mountain Biking options on the user end.
 function mountainBiking() {
   $.ajax(createSettings(activity[1])).then(function(places) {
     places = places.places;
     for (var i = 0; i < places.length; i++) {
       $("#mountainBiking").append("<h5>" + places[i].name + "</h5>");
-
       $("#mountainBiking").append("<p class=\"card-text\" id=\"desc1\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
-
       $("#mountainBiking").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
 }
 mountainBiking();
 
+// lists out the camping options on the user end.
 function camping() {
   $.ajax(createSettings(activity[2])).then(function(places) {
     places = places.places;
     console.log(places[1].activities);
-    for (var i = 0; i < places.length; i++) {
+    for (var i = 1; i < places.length; i++) {
       $("#camping").append("<h5>" + places[i].name + "</h5>");
-
       $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +decodeHtml(places[i].activities[0].description) + "</p></p>");
-
       $("#camping").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
