@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS bwatersdb;
+CREATE DATABASE bwatersdb;

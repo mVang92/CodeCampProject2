@@ -1,0 +1,174 @@
+{{!-- Jumbotron --}}
+<div class="jumbotron jumbotron-fluid">
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="/">
+      <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">      BWCA
+      Adventure Tours <i class="fas fa-angle-double-right"></i>
+    </a>
+  </nav>
+  <img src="../images/bannerlogo.png" id="logo">
+</div>
+
+{{!-- Current Date Weather Bar --}}
+<div class="container-fluid text-center" id="weathertop">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="list-inline-item"><i class="fas fa-sun"></i> Today's Weather in the BWCA:</p>
+      <div class="list-inline-item" id="day0Date"></div>
+      <div class="list-inline-item" id="day0Day"></div>
+      <div class="list-inline-item" id="day0Max"></div>
+      <div class="list-inline-item" id="day0Min"></div>
+      <div class="list-inline-item" id="day0Cond"></div>
+    </div>
+  </div>
+</div>
+
+{{!-- Trip discription cards --}}
+<div class="row tripheader">
+  <div class="col-sm-12 col-md-12 text-center">
+    <h2 style="color:#c49e6b;">Our Trips</h2>
+    <p>The Boundary Water one stop for Adventure, BWCA Adventure Tours offers the easiest way to gather information about BWCA
+      outdoor activities and plan an amazing trip. We have most fun and best trips in the business!</p>
+  </div>
+</div>
+
+<div class="container-fluid">
+  {{!-- Card one --}}
+  <div class="card-group tripcards">
+    <div class="card">
+      <img class="card-img-top" src="../images/hiking.jpg" alt="Card image cap">
+      <div class="card-body scroll">
+        <h5 class="card-title" id="hiking">Hiking Tours</h5>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer">
+        <a href="/hiking" class="card-link">Plan a Trip</a>
+      </div>
+    </div>
+
+    {{!-- Card two --}}
+    <div class="card">
+      <img class="card-img-top" src="../images/camping.jpg" alt="Card image cap">
+      <div class="card-body scroll">
+        <h5 class="card-title" id="camping">Camping</h5>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer">
+        <a href="/camping" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
+      </div>
+    </div>
+
+    {{!-- Card three --}}
+    <div class="card">
+      <img class="card-img-top" src="../images/biking.jpg" alt="Card image cap">
+      <div class="card-body scroll">
+        <h5 class="card-title" id="mountainBiking">Mountain Biking</h5>
+        <p class="card-text"></p>
+      </div>
+      <div class="card-footer">
+        <a href="/mountain-biking" class="card-link" style="color:#c49e6b;">Plan a Trip</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Write Review Button --}}
+<div class="row">
+  <div class="col-md-12 text-center">
+    <a href="/form"><button type="button" class="btn btn-lg" id="reviewButton">Write a Review</button></a>
+  </div>
+</div>
+
+{{!-- Review Section --}}
+<div class="container-fluid">
+  <div class="row" id="hc-reviews">
+    <div class="col-md-7 scroll">
+      <h5>Reviews</h5>
+      <hr>
+      <ul id="review" class="list-group">
+        {{#each bwaters}}
+        <li class="reviewHbrs">
+          Name:<span>{{this.firstName}}</span>
+          <br>Comment:<div class= "edit" data-bwatersid="{{this.id}}">{{this.comments}}</div>
+          <br><a><button type="button" class="btn btn-dark updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
+          <a><button type="button" class="btn btn-danger deleteReview" data-bwatersid="{{this.id}}">X</button></a>
+          <hr>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-5 ratings-bar">
+        <h5>Total Review Ratings:</h5>
+        <hr>
+        <div id="viz"></div>
+    </div>
+  </div>  
+</div>
+
+{{!-- Weather Forecast --}}
+<div class="container-fluid text-center" id="weather">
+  <div class="row">
+    {{!-- Next day weather --}}
+    <div class="col-md-12 weatherdays" id="">
+      <h3 class="list-inline-item"><i class="fas fa-sun"></i> Next six days in the BWCA:</h3><br>
+      <div class="list-inline-item" id="day1Date"></div>
+      <div class="list-inline-item" id="day1Day"></div>
+      <div class="list-inline-item" id="day1Max"></div>
+      <div class="list-inline-item" id="day1Min"></div>
+      <div class="list-inline-item" id="day1Cond"></div>
+    </div>
+    {{!-- Third day weather --}}
+    <div class="col-md-12 weatherdays" id="">
+      <div class="list-inline-item" id="day2Date"></div>
+      <div class="list-inline-item" id="day2Day"></div>
+      <div class="list-inline-item" id="day2Max"></div>
+      <div class="list-inline-item" id="day2Min"></div>
+      <div class="list-inline-item" id="day2Cond"></div>
+    </div>
+    {{!-- Fourth day weather --}}
+    <div class="col-md-12 weatherdays" id="">
+      <div class="list-inline-item" id="day3Date"></div>
+      <div class="list-inline-item" id="day3Day"></div>
+      <div class="list-inline-item" id="day3Max"></div>
+      <div class="list-inline-item" id="day3Min"></div>
+      <div class="list-inline-item" id="day3Cond"></div>
+    </div>
+    {{!-- Fifth day weather --}}
+    <div class="col-md-12 weatherdays" id="">
+      <div class="list-inline-item" id="day4Date"></div>
+      <div class="list-inline-item" id="day4Day"></div>
+      <div class="list-inline-item" id="day4Max"></div>
+      <div class="list-inline-item" id="day4Min"></div>
+      <div class="list-inline-item" id="day4Cond"></div>
+    </div>
+    {{!-- Sixth day weather --}}
+    <div class="col-md-12 weatherdays" id="">
+      <div class="list-inline-item" id="day5Date"></div>
+      <div class="list-inline-item" id="day5Day"></div>
+      <div class="list-inline-item" id="day5Max"></div>
+      <div class="list-inline-item" id="day5Min"></div>
+      <div class="list-inline-item" id="day5Cond"></div>
+    </div>
+  </div>
+</div>
+
+{{!-- Footer --}}
+<div id="footer">
+  <div class="container">
+    <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay</p>
+  </div>
+</div>
+
+<script src="/js/index.js"></script> {{!-- jQuery CDN --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> {{!-- D3 CDN
+--}}
+<script src="https://d3js.org/d3.v5.min.js" type="text/JavaScript"></script>
+<!-- D3 Library script -->
+<script src="/js/script.js"></script> {{!-- Trip API --}}
+<script src="/js/trips.js"></script>
+<!-- Weather API -->
+<script src="/js/weather.js"></script>
+<!-- Views to append data to page -->
+{{!-- <script src="js/view.js"></script> --}}
+<!-- CRUD -->
+<script src="js/review.js"></script>

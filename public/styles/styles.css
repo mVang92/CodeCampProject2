@@ -1,0 +1,212 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f2e4;
+}
+
+/* unvisited link */
+a:link {
+  color: #96a515;
+}
+
+/* visited link */
+a:visited {
+  color: #96a515;
+}
+
+/* mouse over link */
+a:hover {
+  color: #96a515;
+}
+
+/* selected link */
+a:active {
+  color: #96a515;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+.tripDetails {
+
+  height: 500px;
+}
+
+#weather {
+  margin: 0px;
+  background-color: #1f2c38;
+  color: #f4f2e4;
+  line-height: 20px;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#weathertop {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #1f2c38;
+  margin: 0px;
+  margin-bottom: 0px;
+  color: #f4f2e4;
+  line-height: 5px;
+  font-size: 15px;
+}
+
+.weatherdays {
+  padding: 5px;
+}
+
+.jumbotron {
+  background-image: url('../images/bannerbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:450px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#logo {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: -10px;
+}
+
+.tripcards {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#reviewButton {
+  margin-bottom: 30px;
+  background-color: #1f2c38;
+  color: #f4f2e4;
+}
+
+#reviewButton:hover{
+  background:rgba(160,138,98,0.75);
+}
+
+#submitReview {
+  background-color: #1fb800;
+  color: #f4f2e4;
+}
+
+#submitReview:hover {
+  background-color: #30ff07;
+  color: #ffffff;
+}
+
+#closeBtn {
+  background-color: #bb0000;
+  color: #f4f2e4;
+}
+
+#closeBtn:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.card-link {
+  transition-duration: 0.5s !important;
+  color: #c49e6b !important;
+}
+
+.card-link:hover {
+  transition-duration: 0.2s !important;
+  color: black !important;
+}
+
+hr {
+  margin-top: 0;
+}
+
+#footer {
+  bottom: 0px;
+  width: 100%;
+  position: relative;
+  background-color: #c49e6b;
+  text-align: center;
+  color: #1f2c38;
+  padding: 25px 0 5px 0;
+  margin-top: 0px;
+  }
+
+.navbar {
+  background:rgba(160,138,98,0.75);
+  }
+
+#hc-reviews {
+  background:rgba(160,138,98,0.25);
+  padding: 50px 0px 0px 50px;
+}
+
+.reviewHbrs {
+  padding-bottom: 25px;
+}
+
+#tripreview-header {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+#myForm {
+  margin: 25px 15px 25px 15px;
+}
+
+.nameinput {
+  margin: 0px 0px 15px 0px;
+}
+
+.forminput {
+  margin: 0px 0px 15px 0px;
+}
+
+.tripheader {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 50px 20px 50px 20px;
+}
+
+.modal-header {
+  background:rgba(160,138,98,0.25);
+  color: #1f2c38;
+}
+
+.scroll {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.card {
+  border-color:#f4f2e4;
+  border-radius: 0px;
+}
+
+.ratings-bar {
+  float: left;
+}
+
+svg {
+  width: 100%;
+}
+
+.activities {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#cardImage {
+  border-radius: 20px;
+  width: 70%;
+  padding: 10px;
+  margin: auto;
+}
