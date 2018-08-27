@@ -114,7 +114,11 @@ hr {
 
 #hc-reviews {
   background:rgba(160,138,98,0.25);
-  padding: 25px 0 25px 0;
+  padding: 50px 0px 0px 50px;
+}
+
+.reviewHbrs {
+  padding-bottom: 25px;
 }
 
 #tripreview-header {
@@ -154,5 +158,9 @@ hr {
 .card {
   border-color:#f4f2e4;
   border-radius: 0px;
+}
+
+.ratings-bar {
+  float: left;
 }
 

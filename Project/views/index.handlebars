@@ -78,44 +78,28 @@
     <a href="/form"><button type="button" class="btn btn-lg" id="reviewButton">Write a Review</button></a>
   </div>
 </div>
+
 <hr> {{!-- Review Section --}}
-<div class="container">
+<div class="container-fluid">
     <div class="row" id="hc-reviews">
-      <div class="col-md-8">
+      <div class="col-md-7">
           <ul id="review" class="list-group">
             {{#each bwaters}}
-            <li>
+            <li class="reviewHbrs">
+              {{!-- {{this.id}} --}}
               {{this.firstName}}
               <br>{{this.comments}}
-              <br><a><button class="updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
-              <br><a><button class="deleteReview" data-bwatersid="{{this.id}}">Delete</button></a>
+              <br><a><button type="button" class="btn btn-dark updateReview" data-bwatersid="{{this.id}}">Edit</button></a>
+              <a><button type="button" class="btn btn-danger deleteReview" data-bwatersid="{{this.id}}">X</button></a>
             </li>
             {{/each}}
           </ul>
         </div>
-      <div class="col-md-4">
+      <div class="col-md-5 ratings-bar">
           <h5>Total Review Ratings:</h5>
           <div id="viz" class="col-sm-4"></div>
       </div>
   </div>  
-</div>
-    {{!-- </div>
-    <div class="col-md-4">
-      <h3 id="name2"></h3>
-      <p id="reviewDesc2"></p>
-      <a href="#" class="card-link">D3 rating graph here</a>
-    </div>
-    <div class="col-md-4">
-      <h3 id="name1"></h3>
-      <p id="reviewDesc1"></p>
-      <a href="#" class="card-link">D3 rating graph here</a> --}}
-
-     
-    </div>
-  </div>
-
-
-
 </div>
 
 {{!-- Weather Forecast --}}
@@ -168,8 +152,7 @@
 {{!-- Footer --}}
 <div id="footer">
   <div class="container">
-    <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay <i class="fas fa-child"></i><i
-        class="fas fa-child"></i><i class="fas fa-child"></i><i class="fas fa-child"></i></p>
+    <p class="footer-block">Team CodeCamp-Project 2 // Team NoVactions - Meng, Tunji, Tashi + Lindsay</p>
   </div>
 </div>
 
