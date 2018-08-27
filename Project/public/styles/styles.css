@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  background: #f4f2e4;
 }
 
 /* unvisited link */
@@ -34,7 +35,6 @@ h2 {
 
   height: 500px;
 }
-
 
 #weather {
   margin: 0px;
@@ -89,8 +89,38 @@ h2 {
   color: #f4f2e4;
 }
 
-#reviewButton:hover {
+#reviewButton:hover{
   background:rgba(160,138,98,0.75);
+}
+
+#submitReview {
+  background-color: #1fb800;
+  color: #f4f2e4;
+}
+
+#submitReview:hover {
+  background-color: #30ff07;
+  color: #ffffff;
+}
+
+#closeBtn {
+  background-color: #bb0000;
+  color: #f4f2e4;
+}
+
+#closeBtn:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.card-link {
+  transition-duration: 0.5s !important;
+  color: #c49e6b !important;
+}
+
+.card-link:hover {
+  transition-duration: 0.2s !important;
+  color: black !important;
 }
 
 hr {
@@ -164,3 +194,19 @@ hr {
   float: left;
 }
 
+svg {
+  width: 100%;
+}
+
+.activities {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#cardImage {
+  border-radius: 20px;
+  width: 70%;
+  padding: 10px;
+  margin: auto;
+}

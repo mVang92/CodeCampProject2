@@ -1,7 +1,7 @@
 {{!-- Jumbotron --}}
 <div class="jumbotron jumbotron-fluid">
   <nav class="navbar navbar-dark">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/">
     <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     BWCA Adventure Tours <i class="fas fa-angle-double-right"></i>
     </a>
@@ -82,7 +82,8 @@
           </div>
 
         <div class="col-md-10 mb-3">
-          <button type="submit" class="btn" id="submitReview" style="background-color: #1f2c38; color: #96a515">Submit Review</button>
+          <button type="submit" class="btn" id="submitReview">Submit Review</button>
+          <a href="/"><button type="button" class="btn" id="closeBtn">Cancel</button></a>
         </div>
       </form>
 </div>
@@ -102,9 +103,7 @@
           <p>Please checkout more of our exciting trips!</p>
         </div>
         <div class="modal-footer" style="background-color: #c49e6b;">
-          <button type="button" class="btn" style="background-color: #1f2c38; color: #96a515">
-            <a href="/">Back</a>
-          </button>
+          <a href="/"><button type="button" class="btn" id="closeBtn">Return Home</button></a>
         </div>
       </div>
     </div>

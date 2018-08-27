@@ -35,12 +35,11 @@ function hiking() {
       if (places[i].description) {
         $("#hiking").append("<h5>" + places[i].name + "</h5>");
         $("#hiking").append("<p class=\"card-text\" id=\"desc\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
-        $("#hiking").append("<p><a href=" +places[i].activities[0].url +"target=\"_blank\"> Read more</a> </p>");
+        $("#hiking").append("<p><a href=" + places[i].activities[0].url + " target=\"_blank\"> Read more</a> </p>");
       }
     }
   });
 }
-
 hiking();
 
 function mountainBiking() {
@@ -48,10 +47,8 @@ function mountainBiking() {
     places = places.places;
     for (var i = 0; i < places.length; i++) {
       $("#mountainBiking").append("<h5>" + places[i].name + "</h5>");
-
       $("#mountainBiking").append("<p class=\"card-text\" id=\"desc1\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
-
-      $("#mountainBiking").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
+      $("#mountainBiking").append("<p><a href=" + places[i].activities[0].url + " target=\"_blank\"> Read more</a> </p>");
     }
   });
 }
@@ -66,7 +63,7 @@ function camping() {
 
       $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +decodeHtml(places[i].activities[0].description) + "</p></p>");
 
-      $("#camping").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
+      $("#camping").append("<p><a href=" + places[i].activities[0].url + " target=\"_blank\"> Read more</a> </p>");
     }
   });
 }
