@@ -2,6 +2,26 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* unvisited link */
+a:link {
+  color: #96a515;
+}
+
+/* visited link */
+a:visited {
+  color: #96a515;
+}
+
+/* mouse over link */
+a:hover {
+  color: #96a515;
+}
+
+/* selected link */
+a:active {
+  color: #96a515;
+}
+
 h2 {
   font-family: 'Roboto Slab', serif;
 }
@@ -11,7 +31,7 @@ h2 {
 }
 
 .tripDetails {
-  border: 1px solid black;
+
   height: 500px;
 }
 
@@ -31,7 +51,7 @@ h2 {
   padding-bottom: 15px;
   background-color: #1f2c38;
   margin: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   color: #f4f2e4;
   line-height: 5px;
   font-size: 15px;
@@ -63,13 +83,13 @@ h2 {
   margin-top: 25px;
 }
 
-#reviewbutton {
+#reviewButton {
   margin-bottom: 30px;
-  background-color: #c49e6b;
+  background-color: #1f2c38;
   color: #f4f2e4;
 }
 
-#reviewbutton:hover {
+#reviewButton:hover {
   background:rgba(160,138,98,0.75);
 }
 
@@ -96,7 +116,43 @@ hr {
   background:rgba(160,138,98,0.25);
   padding: 25px 0 25px 0;
 }
+
+#tripreview-header {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+#myForm {
+  margin: 25px 15px 25px 15px;
+}
+
+.nameinput {
+  margin: 0px 0px 15px 0px;
+}
+
+.forminput {
+  margin: 0px 0px 15px 0px;
+}
+
+.tripheader {
+  background:rgba(160,138,98,0.25);
+  margin: 0px;
+  padding: 50px 20px 50px 20px;
+}
+
+.modal-header {
+  background:rgba(160,138,98,0.25);
+  color: #1f2c38;
+}
+
 .scroll {
   max-height: 500px;
   overflow-y: auto;
 }
+
+.card {
+  border-color:#f4f2e4;
+  border-radius: 0px;
+}
+

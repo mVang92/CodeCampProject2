@@ -48,7 +48,9 @@ function mountainBiking() {
     places = places.places;
     for (var i = 0; i < places.length; i++) {
       $("#mountainBiking").append("<h5>" + places[i].name + "</h5>");
+
       $("#mountainBiking").append("<p class=\"card-text\" id=\"desc1\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
+
       $("#mountainBiking").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
@@ -61,7 +63,9 @@ function camping() {
     console.log(places[1].activities);
     for (var i = 0; i < places.length; i++) {
       $("#camping").append("<h5>" + places[i].name + "</h5>");
+
       $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +decodeHtml(places[i].activities[0].description) + "</p></p>");
+
       $("#camping").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
