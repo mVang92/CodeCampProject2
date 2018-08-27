@@ -7,8 +7,6 @@ function weather() {
     url: weatherURL,
     method: "GET"
   }).then(function(response) {
-    // console.log(response);
-
     // Appends dates of the week to the page
     function getDates() {
       for (var i = 0; i < forecastDays; i++) {

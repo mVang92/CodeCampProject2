@@ -29,7 +29,6 @@ function createSettings(activity) {
 
 // lists out the hiking options on the user end. 
 function hiking() {
-  console.log("hikin");
   $.ajax(createSettings(activity[0])).then(function(places) {
     places = places.places;
     for (var i = 0; i < places.length; i++) {
@@ -60,7 +59,6 @@ mountainBiking();
 function camping() {
   $.ajax(createSettings(activity[2])).then(function(places) {
     places = places.places;
-    console.log(places[1].activities);
     for (var i = 1; i < places.length; i++) {
       $("#camping").append("<h5>" + places[i].name + "</h5>");
       $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +decodeHtml(places[i].activities[0].description) + "</p></p>");

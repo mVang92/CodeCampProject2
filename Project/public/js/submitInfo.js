@@ -34,10 +34,7 @@ $(document).ready(function() {
         .val()
         .trim()
     };
-    console.log(userInput);
     $.post("/api/bwaters", userInput).done(function() {
-      console.log("Posted new data to database.");
-
       $("#myModal").modal("toggle");
       $("#myModal").on("shown.bs.modal", function() {
         $("#myForm").trigger("focus");
