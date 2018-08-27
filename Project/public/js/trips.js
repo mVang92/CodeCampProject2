@@ -1,4 +1,14 @@
 var activity = ["hiking", "mountain%20biking", "camping"];
+
+// modified from insign's solution on Stack Overflow:
+// https://stackoverflow.com/questions/5796718/html-entity-decode
+
+function decodeHtml(html) {
+  var txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value === html ? txt.value : decodeHtml(txt.value)
+}
+
 function createSettings(activity) {
   return {
     async: true,
@@ -24,7 +34,7 @@ function hiking() {
     for (var i = 0; i < places.length; i++) {
       if (places[i].description) {
         $("#hiking").append("<h5>" + places[i].name + "</h5>");
-        $("#hiking").append("<p class=\"card-text\" id=\"desc\"><p>" + places[i].activities[0].description + "</p></p>");
+        $("#hiking").append("<p class=\"card-text\" id=\"desc\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
         $("#hiking").append("<p><a href=" +places[i].activities[0].url +"target=\"_blank\"> Read more</a> </p>");
       }
     }
@@ -38,7 +48,9 @@ function mountainBiking() {
     places = places.places;
     for (var i = 0; i < places.length; i++) {
       $("#mountainBiking").append("<h5>" + places[i].name + "</h5>");
-      $("#mountainBiking").append("<p class=\"card-text\" id=\"desc1\"><p>" + places[i].activities[0].description + "</p></p>");
+
+      $("#mountainBiking").append("<p class=\"card-text\" id=\"desc1\"><p>" + decodeHtml(places[i].activities[0].description) + "</p></p>");
+
       $("#mountainBiking").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
@@ -51,10 +63,11 @@ function camping() {
     console.log(places[1].activities);
     for (var i = 0; i < places.length; i++) {
       $("#camping").append("<h5>" + places[i].name + "</h5>");
-      $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +places[i].activities[0].description + "</p></p>");
+
+      $("#camping").append("<p class=\"card-text\" id=\"desc2\"><p>" +decodeHtml(places[i].activities[0].description) + "</p></p>");
+
       $("#camping").append("<p><a href="+places[i].activities[0].url+" target=\"_blank\"> Read more</a> </p>");
     }
   });
 }
-
 camping();
