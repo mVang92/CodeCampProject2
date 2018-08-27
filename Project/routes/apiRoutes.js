@@ -30,7 +30,7 @@ module.exports = function(app) {
   });
 
   // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("/api/bwaters", function(req, res) {
+  app.put("/api/bwaters/:id", function(req, res) {
     db.bwaters
       .update(
         {
@@ -38,7 +38,7 @@ module.exports = function(app) {
         },
         {
           where: {
-            id: req.body.id
+            id: req.params.id
           }
         }
       )
