@@ -1,6 +1,5 @@
 d3.json("/api/bwaters")
     .then(function (d) {
-        console.log(d);
         var qOneTotal = 0;
         var qTwoTotal = 0;
         var qThreeTotal = 0;
@@ -24,23 +23,18 @@ d3.json("/api/bwaters")
             qFiveTotal = qFiveTotal + parseFloat(d[x].Q5);
         }
         var avgQ1 = qOneTotal / d.length;
-        console.log(avgQ1);
         avgRating.push(avgQ1);
 
         var avgQ2 = qTwoTotal / d.length;
-        console.log(avgQ2);
         avgRating.push(avgQ2);
 
         var avgQ3 = qThreeTotal / d.length;
-        console.log(avgQ3);
         avgRating.push(avgQ3);
 
         var avgQ4 = qFourTotal / d.length;
-        console.log(avgQ4);
         avgRating.push(avgQ4);
 
         var avgQ5 = qFiveTotal / d.length;
-        console.log(avgQ5);
         avgRating.push(avgQ5);
 
 
@@ -165,6 +159,5 @@ d3.json("/api/bwaters")
             })
             .duration(3000)
             .ease(d3.easeBounceOut)
-            console.log(d + ",   " + avgRating)
     });
     

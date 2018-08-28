@@ -1,5 +1,3 @@
-console.log("review.js loaded");
-
 $(document).on("click", ".updateReview", editReview);
 $(document).on("keyup", ".inputBox", finishEdit);
 
@@ -8,8 +6,6 @@ function editReview() {
   var id = $(this).data('bwatersid');
   var reviewDiv = $(`div[data-bwatersid = ${id}]`)
   var currentReview = reviewDiv.text();
-  
-  console.log(currentReview);
   var inputBox = $(`<input class="inputBox" type="text" data-bwatersid=${id}></input>`);
   inputBox.val(currentReview);
   reviewDiv.replaceWith(inputBox); 
@@ -21,8 +17,6 @@ function finishEdit(event) {
     var updatedReview = $(this).val().trim()
     var id = $(this).data('bwatersid');
     $(this).blur();
-    console.log(id);
-    console.log(updatedReview);
     updateReview(id, updatedReview);
   }
 }
@@ -34,7 +28,6 @@ function updateReview(id, updatedReview) {
     comments: updatedReview
     }
   }).then(function(DBValue) {
-    console.log(DBValue);
     location.reload();
   });
 }
@@ -47,7 +40,6 @@ $(document).ready(function() {
     $.ajax("/api/bwaters/" + id, {
       type: "DELETE"
     }).then(function() {
-      console.log("Deleted review: ", id);
       location.reload();
     });
   });
